@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import { Footer, Header, PageNotFound } from './components';
 import { Home, RoomDetails } from './pages';
-import Contact from "./pages/Contact"; 
 
 
 const App = () => {
@@ -13,7 +12,7 @@ const App = () => {
   // ]
 
   // const router = createBrowserRouter(paths);
-  // <RouterProvider router={router} /> 
+  // <RouterProvider router={router} /> 1`
 
   return (
 
@@ -25,7 +24,8 @@ const App = () => {
         <Routes>
           <Route path={'/'} element={<Home />} />
           <Route path={'/room/:id'} element={<RoomDetails />} />
-          <Route path={'*'} element={<PageNotFound />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
 
         <Footer />
